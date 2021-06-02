@@ -2,6 +2,9 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
+
+						</li>
+						<li><a href="{{url('profile')}}" class="{{ (request()->is('profile*')) ? 'active' : '' }}"><i class="lnr lnr-user"></i> <span>Profile</span></a></li>
 						<li><a href="{{url('home')}}" class="{{ (request()->is('home*')) ? 'active' : '' }}"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 						<li><a href="{{url('document')}}" class="{{ (request()->is('document*')) ? 'active' : '' }}"><i class="lnr lnr-book"></i> <span>Documents</span></a></li>
 						

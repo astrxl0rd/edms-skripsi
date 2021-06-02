@@ -14,21 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
+Route::get('/register', function(){
+    return view('auth.register');
+});
 
 
 
 Route::get('/home', function(){
-    return view('main');
+    return view('dashboard.home');
 });
 Route::get('/document', function(){
-    return view('document');
+    return view('documents.document');
 });
 Route::get('/mydocument', function(){
-    return view('mydocument');
+    return view('documents.mydocument');
 });
 Route::get('/categories', function(){
-    return view('categories');
+    return view('documents.categories');
 });
+
+Route::get('/profile', function(){
+    return view('profile.profile');
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard.home');
+
+

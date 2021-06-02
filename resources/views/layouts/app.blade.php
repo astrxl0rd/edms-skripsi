@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Home</title>
+<title>@yield('judul_halaman')</title>
 
 <head>
     @include('inc.head')
